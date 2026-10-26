@@ -32,6 +32,17 @@ Una simple declaracion de variables que lo que hace es declarar el piso 0 y el p
 
 ## Estados
 
-Se indica que hace cada Estado en el idle intente hacer que usara las variables de botonera
+Se indica que hace cada Estado en el idle intente hacer que usara las variables de botonera tambien añadi
+una funcion para evitar que el usuario pueda subir hasta el cielo o bajar al infierno si esto fuera a pasar 
+saltamos al estado de error que vuelve al ide sin hacer nada
+
+
+
+
+| Transición | Condición |
+| --- | --- |
+| Idle → UP | Se pulsa boton nivel 1|
+| Idle → Down | Se pulsa boton 0|
+| Idle →  ERROR | Se intenta bajar estando abajo o subir estando arriba|
 
 
