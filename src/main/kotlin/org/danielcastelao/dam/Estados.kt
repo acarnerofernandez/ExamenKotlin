@@ -1,4 +1,5 @@
 package org.danielcastelao.dam
+import org.danielcastelao.dam.botonera
 
 sealed class Estados {
     object Idle : Estados(){
@@ -10,11 +11,12 @@ sealed class Estados {
 
             if (boton == 1 || boton == 0) {
 
-                if (nivel_actual == 0 && boton == 1)
+                if (boton == botonera.NIVEL_1.piso)
                     estado_actual = MovingUP
 
 
-                else if (nivel_actual == 1 && boton == 0)
+
+                else if (boton == botonera.NIVEL_0.piso)
                     estado_actual = MovingDOWN
 
                 else{
